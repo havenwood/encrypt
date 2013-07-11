@@ -2,20 +2,26 @@ require 'encrypt/version'
 require 'openssl'
 
 module Encrypt
-  @aes = OpenSSL::Cipher.new('AES-256-CFB')
+  refine String do
+    AES = OpenSSL::Cipher.new('AES-256-CFB')
 
-  def self.encrypt text, key
-    @aes.encrypt
-    crypt text, key
-  end
+    def encrypt key
+      AES.encrypt
+      crypt self, key
+    end
 
-  def self.decrypt text, key
-    @aes.decrypt
-    crypt text, key
-  end
+    def decrypt key
+      AES.decrypt
+      crypt self, key
+    end
 
-  def self.crypt text, key
-    @aes.pkcs5_keyivgen(key)
-    @aes.update(text) << @aes.final
+    private
+
+    def crypt text, key
+      AES.pkcs5_keyivgen(key)
+      AES.update(text) << AES.final
+    end
   end
 end
+
+using Encrypt

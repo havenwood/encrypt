@@ -1,22 +1,28 @@
 # Encrypt
 
-A simple Ruby encryption gem.
+A simple Ruby gem for encrypting and decrypting strings with AES.
+
+Encrypt uses Ruby 2.0's experimental refinements to make the #encrypt and #decrypt methods available on String *only* for the file in which Encrypt is required.
 
 ## Usage
 
 ```ruby
 require 'encrypt'
 
-encrypted = Encrypt.encrypt 'sekret msg', 'passw0rd'
+encrypted = 'sekret msg'.encrypt 'passw0rd'
   #=> "\xFDB\xDF@b\xD0\xB8>\xFD\xFE"
 
-Encrypt.decrypt encrypted, 'passw0rd'
+encrypted.decrypt 'passw0rd'
   #=> "sekret msg"
 ```
 
 ## Installation
 
     $ gem install encrypt
+    
+## Requirements
+
+    - Ruby 2.0.0+ (uses Ruby 2.0 experimental refinements)
 
 ## Contributing
 
