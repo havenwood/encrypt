@@ -24,7 +24,7 @@ encrypted.decrypt 'passw0rd'
     
 ## Requirements
 
-    Ruby 2.0.0+ (uses Ruby 2.0 experimental refinements)
+Ruby 2.0.0+ (uses Ruby 2.0 [experimental refinements](http://www.ruby-doc.org/core-2.0/doc/syntax/refinements_rdoc.html))
 
 ## Contributing
 
