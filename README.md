@@ -2,10 +2,6 @@
 
 Simple Ruby encryption gem.
 
-## Installation
-
-    $ gem install encrypt
-
 ## Usage
 
 ```ruby
@@ -17,6 +13,10 @@ encrypted = Encrypt.encrypt 'sekret message', 'passw0rd'
 Encrypt.decrypt encrypted, 'passw0rd'
   #=> "sekret message"
 ```
+
+## Installation
+
+    $ gem install encrypt
 
 ## Contributing
 
