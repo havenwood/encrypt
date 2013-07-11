@@ -9,6 +9,8 @@ Encrypt uses Ruby 2.0's experimental refinements to make the #encrypt and #decry
 ```ruby
 require 'encrypt'
 
+using Encrypt
+
 encrypted = 'sekret msg'.encrypt 'passw0rd'
   #=> "\xFDB\xDF@b\xD0\xB8>\xFD\xFE"
 
