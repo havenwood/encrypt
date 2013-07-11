@@ -2,7 +2,7 @@
 
 A simple Ruby gem for encrypting and decrypting strings with AES.
 
-Encrypt uses Ruby 2.0's experimental refinements to make the #encrypt and #decrypt methods available on String *only* for the file in which Encrypt is required.
+Encrypt uses Ruby 2.0's experimental refinements to extend String locally to add the #encrypt and #decrypt methods. Activate the refinement with using: `using Encrypt`.
 
 ## Usage
 
