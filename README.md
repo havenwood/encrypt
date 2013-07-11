@@ -1,17 +1,17 @@
 # Encrypt
 
-Simple Ruby encryption gem.
+A simple Ruby encryption gem.
 
 ## Usage
 
 ```ruby
 require 'encrypt'
 
-encrypted = Encrypt.encrypt 'sekret message', 'passw0rd'
-  #=> "\xFDB\xDF@b\xD0\xB8>\xEB\xEA\xD3\xA69\v"
+encrypted = Encrypt.encrypt 'sekret msg', 'passw0rd'
+  #=> "\xFDB\xDF@b\xD0\xB8>\xFD\xFE"
 
 Encrypt.decrypt encrypted, 'passw0rd'
-  #=> "sekret message"
+  #=> "sekret msg"
 ```
 
 ## Installation
