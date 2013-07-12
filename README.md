@@ -1,8 +1,10 @@
 # Encrypt
 
-A simple Ruby gem for encrypting and decrypting strings with AES.
+Simply encrypt and decrypt strings with AES-256.
 
 Encrypt uses Ruby 2.0's experimental refinements to extend String locally to add the #encrypt and #decrypt methods. Activate the refinement with using: `using Encrypt`.
+
+Encrypt uses an AES-256 cipher in CTR mode. A randomly generated salt and IV are publicly stored as the 32 bytes preceding the encrypted data.
 
 ## Usage
 

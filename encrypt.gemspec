@@ -1,15 +1,13 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'encrypt/version'
+require File.join(File.expand_path('../lib', __FILE__), 'version')
 
 Gem::Specification.new do |spec|
   spec.name          = 'encrypt'
   spec.version       = Encrypt::VERSION
   spec.authors       = ['Shannon Skipper']
   spec.email         = ['shannonskipper@gmail.com']
-  spec.description   = %q{Encrypt and decrypt.}
-  spec.summary       = %q{A gem for encrypting and decrypting with AES.}
+  spec.description   = %q{A gem for encrypting and decrypting a String with AES-256. Just supply the password.}
+  spec.summary       = %q{Encrypts and decrypts strings with AES-256 in CTR mode. Encrypt uses Ruby 2.0's experimental refinements to extend String locally to add the #encrypt and #decrypt methods.}
   spec.homepage      = 'https://github.com/havenwood/encrypt#readme'
   spec.license       = 'MIT'
   spec.files         = `git ls-files`.split($/)
