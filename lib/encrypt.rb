@@ -12,6 +12,7 @@ module Encrypt
     end
 
     def decrypt key
+      return nil unless self.bytesize > 32
       cipher = OpenSSL::Cipher::AES256.new(:CTR)
       cipher.decrypt
       salt = self.byteslice(0..15)
