@@ -1,5 +1,5 @@
 # coding: utf-8
-require File.join(File.expand_path('../lib', __FILE__), 'version')
+require File.join(File.expand_path('../lib', __FILE__), 'encrypt/version')
 
 Gem::Specification.new do |spec|
   spec.name          = 'encrypt'

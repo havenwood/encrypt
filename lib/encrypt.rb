@@ -1,4 +1,3 @@
-require 'encrypt/version'
 require 'openssl'
 
 module Encrypt
