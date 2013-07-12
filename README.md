@@ -14,7 +14,7 @@ require 'encrypt'
 using Encrypt
 
 encrypted = 'sekret msg'.encrypt 'passw0rd'
-  #=> "\xFDB\xDF@b\xD0\xB8>\xFD\xFE"
+  #=> "6+s\xEB\x00\xA4\x84\x96cF\xB8)\xBC\x7F\x8D?c\xF5~,Ps9\xC6\xD3\x7F\x86\xA4G\xAA\xAFV$\xD3:`\xCC\xD9\xF2\xD9\v\\\x87\xF1"
 
 encrypted.decrypt 'passw0rd'
   #=> "sekret msg"
