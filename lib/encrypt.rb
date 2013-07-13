@@ -12,13 +12,16 @@ module Encrypt
     end
 
     def decrypt key
-      return nil unless self.bytesize > 32
-      cipher = OpenSSL::Cipher::AES256.new(:CTR)
-      cipher.decrypt
-      salt = self.byteslice(0..15)
-      cipher.key = OpenSSL::PKCS5.pbkdf2_hmac_sha1(key, salt, 20000, 32)
-      cipher.iv = self.byteslice(16..31)
-      cipher.update(self.byteslice(32..-1)) << cipher.final
+      if self.bytesize > 32
+        cipher = OpenSSL::Cipher::AES256.new(:CTR)
+        cipher.decrypt
+        salt = self.byteslice(0..15)
+        cipher.key = OpenSSL::PKCS5.pbkdf2_hmac_sha1(key, salt, 20000, 32)
+        cipher.iv = self.byteslice(16..31)
+        cipher.update(self.byteslice(32..-1)) << cipher.final
+      else
+        nil
+      end
     end
   end
 end
