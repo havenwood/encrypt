@@ -12,6 +12,10 @@ describe Encrypt do
   it 'encrypts' do
     assert @encrypted != 'sekret'
   end
+  
+  it 'does not decrypt with incorrect key' do
+    refute_equal 'sekret', @encrypted.decrypt('password')
+  end
 
   it 'decrypts' do
     assert_equal 'sekret', @encrypted.decrypt('passw0rd')
