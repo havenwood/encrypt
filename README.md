@@ -20,6 +20,9 @@ encrypted.decrypt 'passw0rd'
   #=> "super sekret"
 ```
 
+## Is it any good?
+Maybe. [RbNACL](https://github.com/cryptosphere/rbnacl#readme) has been more thoroughly vetted and is recommended.
+
 ## Installation
 
     $ gem install encrypt
