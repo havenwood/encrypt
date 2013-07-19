@@ -10,7 +10,7 @@ describe Encrypt do
   end
 
   it 'encrypts' do
-    @encrypted.bytes.count == 38
+    assert @encrypted != 'sekret'
   end
 
   it 'decrypts' do
