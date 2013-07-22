@@ -14,7 +14,7 @@ require 'encrypt'
 using Encrypt
 
 encrypted = 'super sekret'.encrypt 'passw0rd'
-  #=> "\x04\b[\b\"\x15H\xEB\x8C\xE6\xA2r\xDA\x15\xDDH\xEB\xF2|\x11\xEFF\"\x15\xE9\xBB\xB1\xCEO\xB6Y\x19zk\xDD\xD5\x9A\xBD\x01\xF5\"\x11F/1\x1D;2g\xFC\xB8np\xBC"
+  #=> "\x04\b[\b\"\x15\x9FK\x18+\xA3X\x96S\xD9\xF2L. \x15\a2\"\x15,x)\xE2\xDA~\xA0\x90M\x06\xB0\xAC&\x89\xEFw\"\x15n\x90\xDCq2\x9B\xA8\x80Ca\xBB\x0F+NT\xD4"
 
 encrypted.decrypt 'passw0rd'
   #=> "super sekret"
@@ -30,7 +30,7 @@ Ruby 2.0.0+ (uses [experimental refinements](http://www.ruby-doc.org/core-2.0/do
 
 ## Alternatives
 
-Want a cipher other than AES-256 or a mode other than CTR? A project that has been more thoroughly vetted? Looking for something that works on Ruby 1.9? Here are some alternatives:
+Want a cipher other than AES-256 or a mode other than CBC? A project that has been more thoroughly vetted? Looking for something that works on Ruby 1.9? Here are some alternatives:
 * [Krypt](https://github.com/krypt/krypt#readme)
 * [RbNACL](https://github.com/cryptosphere/rbnacl#readme)
 * [libsodium](https://github.com/jedisct1/libsodium#readme)
