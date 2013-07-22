@@ -11,6 +11,9 @@ Encrypt makes use of refinements to extend String locally, adding the #encrypt a
 ```ruby
 require 'encrypt'
 
+'not yet'.encrypt 'refinement not activated'
+  #=> NoMethodError: undefined method `encrypt' for "not yet":String
+
 using Encrypt
 
 encrypted = 'super sekret'.encrypt 'passw0rd'
@@ -18,6 +21,9 @@ encrypted = 'super sekret'.encrypt 'passw0rd'
 
 encrypted.decrypt 'passw0rd'
   #=> "super sekret"
+
+encrypted.decrypt 'wrong'
+  #=> OpenSSL::Cipher::CipherError: bad decrypt
 ```
 
 ## Installation
