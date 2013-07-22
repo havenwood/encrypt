@@ -2,9 +2,9 @@
 
 A gem for encrypting and decrypting strings with AES-256. Just supply the password.
 
-Encrypt uses an AES-256 cipher in CTR mode. A randomly generated salt and IV are publicly stored along with the encrypted data.
+Encrypt uses an AES-256 cipher in CBC mode. A randomly generated salt and IV are publicly stored along with the encrypted data.
 
-Encrypt makes use of Ruby 2.0's experimental refinements to extend String locally, adding the #encrypt and #decrypt methods. Activate the refinement with using: `using Encrypt`.
+Encrypt makes use of refinements to extend String locally, adding the #encrypt and #decrypt methods. Activate the refinement with `using Encrypt`.
 
 ## Usage
 

@@ -14,7 +14,7 @@ describe Encrypt do
   end
   
   it 'does not decrypt with incorrect key' do
-    refute_equal 'sekret', @encrypted.decrypt('password')
+    assert_raises(OpenSSL::Cipher::CipherError) { @encrypted.decrypt('pwd') }
   end
 
   it 'decrypts' do
