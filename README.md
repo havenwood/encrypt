@@ -29,7 +29,11 @@ encrypted.decrypt 'passw0rd'
 Ruby 2.0.0+ (uses [experimental refinements](http://www.ruby-doc.org/core-2.0/doc/syntax/refinements_rdoc.html))
 
 ## Alternatives
-The [RbNACL](https://github.com/cryptosphere/rbnacl#readme) gem has been more thoroughly vetted and is a recommended alternative.
+
+Want a cipher other than AES-256 or a mode other than CTR? A project that has been more thoroughly vetted? Looking for something that works on Ruby 1.9? Here are some alternatives:
+* [Krypt](https://github.com/krypt/krypt#readme)
+* [RbNACL](https://github.com/cryptosphere/rbnacl#readme)
+* [libsodium](https://github.com/jedisct1/libsodium#readme)
 
 ## Contributing
 
