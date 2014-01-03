@@ -26,7 +26,7 @@ gem install encrypt
 
 ## Alternatives
 
-Want a cipher other than AES-256 or a mode other than CBC? A project that has been more thoroughly vetted? Looking for something that works on Ruby 1.9? Here are some alternatives:
+Want a cipher other than AES-256 or a mode other than CBC? A project that has been more thoroughly vetted? Here are some alternatives:
 * [Krypt](https://github.com/krypt/krypt#readme)
 * [RbNACL](https://github.com/cryptosphere/rbnacl#readme)
 * [libsodium](https://github.com/jedisct1/libsodium#readme)
