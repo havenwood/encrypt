@@ -6,7 +6,7 @@ using Encrypt
 
 describe Encrypt do
   before do
-    @encrypted = 'sekret'.encrypt('passw0rd')
+    @encrypted = Encrypt.dump 'sekret', 'passw0rd'
   end
 
   it 'encrypts' do
@@ -14,10 +14,12 @@ describe Encrypt do
   end
   
   it 'does not decrypt with incorrect key' do
-    assert_raises(OpenSSL::Cipher::CipherError) { @encrypted.decrypt('pwd') }
+    assert_raises(OpenSSL::Cipher::CipherError) do
+      Encrypt.load @encrypted, 'wrong pwd'
+    end
   end
 
   it 'decrypts' do
-    assert_equal 'sekret', @encrypted.decrypt('passw0rd')
+    assert_equal 'sekret', Encrypt.load(@encrypted, 'passw0rd')
   end
 end

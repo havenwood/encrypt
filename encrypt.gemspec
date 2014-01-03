@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.version       = Encrypt::VERSION
   spec.authors       = ['Shannon Skipper']
   spec.email         = ['shannonskipper@gmail.com']
-  spec.description   = %q{A gem for encrypting and decrypting strings with AES-256. Just supply the password.}
-  spec.summary       = %q{Encrypt and decrypt strings with AES-256 in CBC mode. Encrypt uses Ruby refinements to extend String locally to add the #encrypt and #decrypt methods.}
+  spec.description   = %q{Encrypt and decrypt strings with AES-256. Just supply the password.}
+  spec.summary       = %q{Encrypt and decrypt strings with AES-256 in CBC mode.}
   spec.homepage      = 'https://github.com/havenwood/encrypt#readme'
   spec.license       = 'MIT'
   spec.files         = `git ls-files`.split($/)
